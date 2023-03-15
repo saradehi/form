@@ -107,11 +107,6 @@
 @media (max-width: 860px) {
   .main_container {
     margin-top: 0px;
-  }
-}
-
-@media (max-width: 500px) {
-  .main_container {
-    padding: 55px;
+    padding: 0;
   }
 }
