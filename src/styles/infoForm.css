@@ -1,0 +1,54 @@
+.div-info-form{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  margin-left: 40px;
+  letter-spacing: 4px;
+  overflow-x: hidden
+}
+
+.icon {
+  width: 2rem;
+  max-width: 2rem;
+  overflow-x: hidden;
+  animation: mounted_info 2s;
+}
+
+.info {
+  width: 14rem;
+  max-width: 14rem;
+    overflow-x: hidden;
+  animation: mounted_info 2s;
+}
+.back {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    transition: all 0.5s;
+    animation: goback 1.5s;
+}
+
+.back:hover{
+    transform: scale(1.05);
+}
+
+@keyframes mounted_info {
+  from{
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes goback {
+  from{
+    right: -100px;
+  }
+  to {
+    right: 40px;
+  }
+}

@@ -1,0 +1,117 @@
+.main_container {
+  transition: all 0.5s;
+  opacity: 1;
+  animation: mounted 2s;
+}
+
+.second_container {
+  background-color: rgba(243, 243, 243, 0.74);
+  backdrop-filter: blur(40px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 40vw;
+  height: 53vh;
+  padding: 80px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+    overflow-x: hidden;
+}
+
+.form-sended {
+  letter-spacing: 3px;
+  padding-top: 30px;
+}
+
+.form-sended > h1 {
+  color: rgba(0, 0, 0, 0.493);
+  margin-bottom: 60px;
+  font-size: 50px;
+}
+
+.form-sended > p {
+  margin-bottom: 30px;
+}
+
+.navLink:link,
+.navLink:visited,
+.navLink:active {
+  text-decoration: none;
+  color: #3a4064;
+}
+
+.div-navLink {
+  width: fit-content;
+  height: 2rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.div-navLink > hr {
+  height: 2px;
+  background-color: #3a4064cc;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  left: -101%;
+  transition: all 0.6s;
+}
+
+.div-navLink:hover > hr {
+  left: 0;
+}
+
+.fade-enter {
+
+  position: relative;
+  left: -120%;
+}
+.fade-exit {
+
+  position: relative;
+  left: 0;
+}
+.fade-enter-active {
+
+  position: relative;
+  left: 0;
+}
+.fade-exit-active {
+
+  position: relative;
+  left: -120%
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: left 1000ms;
+}
+
+@keyframes mounted {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main_container {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 860px) {
+  .main_container {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_container {
+    padding: 55px;
+  }
+}
