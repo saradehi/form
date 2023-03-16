@@ -243,7 +243,6 @@
 @media (max-width: 360px){
     .front-image > img{
     left: -80%;
-    top: -20px;
   }
 
   .front-image > p{
