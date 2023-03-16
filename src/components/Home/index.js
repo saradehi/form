@@ -18,37 +18,39 @@ const Home = () => {
 
   return (
     <div className="second_container">
-      <div id="main-container" className="main_container">
-        <SwitchTransition>
-          <CSSTransition
-            classNames="fade"
-            timeout={3000}
-            key={formStatus ? "message" : "info"}
-            addEndListener={(node, done) =>
-              node.addEventListener("transitionend", done, false)
-            }
-          >
-            {!formStatus ? (
-              <Form setFormStatus={setFormStatus}></Form>
-            ) : (
-              <div className="form-sended">
-                <h1>Formulario enviado</h1>
-                <p>Puedes ver las respuestas en el siguiente link: </p>
-                <div className="div-navLink">
-                  <NavLink className="navLink" to={`/${formId && formId}`}>
-                    Ver respuestas
-                  </NavLink>
-                  <hr></hr>
+      <div className="third_container">
+        <div id="main-container" className="main_container">
+          <SwitchTransition>
+            <CSSTransition
+              classNames="fade"
+              timeout={3000}
+              key={formStatus ? "message" : "info"}
+              addEndListener={(node, done) =>
+                node.addEventListener("transitionend", done, false)
+              }
+            >
+              {!formStatus ? (
+                <Form setFormStatus={setFormStatus}></Form>
+              ) : (
+                <div className="form-sended">
+                  <h1>Formulario enviado</h1>
+                  <p>Puedes ver las respuestas en el siguiente link: </p>
+                  <div className="div-navLink">
+                    <NavLink className="navLink" to={`/${formId && formId}`}>
+                      Ver respuestas
+                    </NavLink>
+                    <hr></hr>
+                  </div>
                 </div>
-              </div>
-            )}
-          </CSSTransition>
-        </SwitchTransition>
-      </div>
-      <div id="front-image" className="front-image">
-        <h1>Mi encuesta</h1>
-        <img src={gif_front} alt="gif"></img>
-        <p onClick={() => hanldeRotateClick()}>Empezar encuesta</p>
+              )}
+            </CSSTransition>
+          </SwitchTransition>
+        </div>
+        <div id="front-image" className="front-image">
+          <h1>Mi encuesta</h1>
+          <img src={gif_front} alt="gif"></img>
+          <p onClick={() => hanldeRotateClick()}>Empezar encuesta</p>
+        </div>
       </div>
     </div>
   );

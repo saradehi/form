@@ -25,6 +25,7 @@
   margin-bottom: 40px;
   border-radius: 2px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .form-sended {
@@ -169,6 +170,7 @@
     margin-bottom: 30px;
     margin-top: 10px;
     height: fit-content;
+      overflow-y: visible;
   }
 
   .front-image > p{
