@@ -1,26 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "../form";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
-import gif_front from "../../img/gif_front.gif"
+import gif_front from "../../img/gif_front.gif";
 import "../../styles/form.css";
 import "../../styles/home.css";
+import { hanldeRotateClick } from "../../controlers/formInputs";
 
 const Home = () => {
   const [formStatus, setFormStatus] = useState(false);
   const formId = useSelector((state) => state.form.id);
 
-  const hanldeRotateClick = () => {
-    const back = document.getElementById("main-container")
-    const front = document.getElementById('front-image')
-
-    back.className += " flip-front";
-    front.className += " flip-back"
-
-  }
-
-  //DGpxWOX9MtowzWbVSdbq
+  useEffect(() => {
+    document.title = "My Form";
+  }, []);
 
   return (
     <div className="second_container">

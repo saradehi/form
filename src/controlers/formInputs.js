@@ -57,3 +57,11 @@ export const handleSubmit = async (
     });
   }
 };
+
+export const hanldeRotateClick = () => {
+  const back = document.getElementById("main-container");
+  const front = document.getElementById("front-image");
+
+  back.className += " flip-front";
+  front.className += " flip-back";
+};
