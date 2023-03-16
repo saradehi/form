@@ -92,6 +92,7 @@
 .button-style {
   background-color: rgba(39, 30, 49, 0.685);
   margin: auto;
+  margin-bottom: 20px;
   color: white;
   height: 3rem;
   width: 10rem;
