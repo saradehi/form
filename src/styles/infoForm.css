@@ -6,14 +6,14 @@
   height: 100%;
 }
 
-.info-form-container >h1{
+.info-form-container > h1 {
   position: absolute;
   top: 50px;
   font-size: 40px;
-    animation: mounted_info 2s;
+  animation: mounted_info 2s;
 }
 
-.div-info-form{
+.div-info-form {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -35,24 +35,23 @@
 .info {
   width: 25rem;
   max-width: 25rem;
-    overflow-x: hidden;
-    font-size: 25px;
-
+  overflow-x: hidden;
+  font-size: 25px;
 }
 .back {
-    position: absolute;
-    right: 40px;
-    bottom: 90px;
-    transition: all 0.5s;
-    animation: goback 1.5s;
+  position: absolute;
+  right: 40px;
+  bottom: 90px;
+  transition: all 0.5s;
+  animation: goback 1.5s;
 }
 
-.back:hover{
-    transform: scale(1.05);
+.back:hover {
+  transform: scale(1.05);
 }
 
 @keyframes mounted_info {
-  from{
+  from {
     opacity: 0;
   }
   to {
@@ -61,10 +60,28 @@
 }
 
 @keyframes goback {
-  from{
+  from {
     right: -100px;
   }
   to {
     right: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .info-form-container {
+    position: absolute;
+  }
+}
+
+@media (max-width: 550px) {
+  .back {
+    position: static;
+    margin-top: 80px;
+  }
+
+  .info-form-container > h1 {
+    top: 20px;
+    animation: mounted_info 2s;
   }
 }

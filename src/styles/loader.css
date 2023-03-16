@@ -31,3 +31,9 @@
         left: 0;
     }
 }
+
+@media (max-width: 1000px){
+    .loader-div{
+        position: absolute;
+    }
+}
