@@ -15,10 +15,10 @@
 
 .main_container > div > form > div:not(.checkbox-div-style) {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   gap: 20px;
-  height: 1.5rem;
 }
 
 .main_container > div > form > .checkbox-div-style {
@@ -41,11 +41,8 @@
 .main_container > div > form > div > input:focus,
 .main_container > div > form > div > select:hover,
 .main_container > div > form > div > select:focus {
-  box-shadow: rgba(94, 81, 119, 0.349) 0px 10px 20px,
-    rgba(121, 99, 160, 0.281) 0px 6px 6px;
-  border: 2px solid rgba(155, 128, 170, 0.411);
-  border-radius: 10px;
-  transform: scale(1.04);
+  border-bottom-width: 2px;
+  transform: scale(1.02);
 }
 
 .input-style,
@@ -55,11 +52,9 @@
   border: none;
   outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.342);
-  width: 18rem;
-  text-align: center;
-  text-transform: uppercase;
+  width: 100%;
+  padding-left: 10px;
   transition: all 0.2s;
-  cursor: pointer;
 }
 
 .date-style,
@@ -68,8 +63,8 @@
 .select-style,
 .select-style:active,
 .select-style:focus {
-  width: 14rem;
-  height: 1.5rem;
+  width: 16rem;
+  height: 2rem;
   justify-self: flex-end;
   text-align: center;
   padding: 1px;
@@ -102,7 +97,6 @@
   width: 10rem;
   outline: none;
   border: 2px solid rgba(201, 201, 201, 0.432);
-  border-radius: 10px;
   font-family: "Mulish", sans-serif;
   font-size: 17px;
   transition: all 0.6s;

@@ -52,6 +52,7 @@ const Home = () => {
         </SwitchTransition>
       </div>
       <div id="front-image" className="front-image">
+        <h1>Mi encuesta</h1>
         <img src={gif_front} alt="gif"></img>
         <p onClick={() => hanldeRotateClick()}>Empezar encuesta</p>
       </div>

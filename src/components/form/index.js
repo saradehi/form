@@ -39,7 +39,7 @@ const Form = ({ setFormStatus }) => {
       >
         {inputs?.map((ele, index) => (
           <div key={index} className={ele.type + "-div-style"}>
-            <label>{ele.type === "submit" ? "" : ele.label}</label>
+            <label>{ele.type === "submit" ? "" : ele.label+ ":"}</label>
             {ele.type !== "select" ? (
               <input
                 className={

@@ -28,16 +28,17 @@ const InfoHome = () => {
       {loader ? (
         <Loader />
       ) : (
-        <>
+        <div className="info-form-container">
+          <h1>Información registrada</h1>
           <div className="div-info-form">
             <p className="icon">
               <FaUserAlt size={30}></FaUserAlt>
             </p>
-            <h1 className="info">
+            <p className="info">
               {formData.full_name &&
                 formData.full_name[0].toUpperCase() +
                   formData.full_name.slice(1)}
-            </h1>
+            </p>
           </div>
           <div className="div-info-form">
             <p className="icon">
@@ -64,7 +65,7 @@ const InfoHome = () => {
           <NavLink className="navLink back" to={"/"}>
             Página principal
           </NavLink>
-        </>
+        </div>
       )}
     </div>
   );
