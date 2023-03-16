@@ -17,6 +17,8 @@ const InfoHome = () => {
   const params = useParams();
   const dispatch = useDispatch();
 
+  const emailsplit = formData.email && formData.email.split('@')
+
   useEffect(() => {
     dispatch(formInfoData(params.id));
     setTimeout(() => {
@@ -32,7 +34,7 @@ const InfoHome = () => {
           <h1>Información registrada</h1>
           <div className="div-info-form">
             <p className="icon">
-              <FaUserAlt size={30}></FaUserAlt>
+              <FaUserAlt ></FaUserAlt>
             </p>
             <p className="info">
               {formData.full_name &&
@@ -42,19 +44,20 @@ const InfoHome = () => {
           </div>
           <div className="div-info-form">
             <p className="icon">
-              <TfiEmail size={30}></TfiEmail>
+              <TfiEmail></TfiEmail>
             </p>
-            <p className="info">{formData?.email}</p>
+            {/* <p className="info">{formData.email.length > 24 ? formData.split('@')email}</p> */}
+            <div className="emailsplit"><p>{emailsplit[0]}</p><p>@{emailsplit[1]}</p></div>
           </div>
           <div className="div-info-form">
             <p className="icon">
-              <BsCalendarDate size={30}></BsCalendarDate>
+              <BsCalendarDate></BsCalendarDate>
             </p>
             <p className="info">{formData?.birth_date}</p>
           </div>
           <div className="div-info-form">
             <p className="icon">
-              <BiWorld size={32}></BiWorld>
+              <BiWorld></BiWorld>
             </p>
             <p className="info">
               {formData.country_of_origin &&

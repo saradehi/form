@@ -16,7 +16,6 @@ export const formInfo = (info) => async (dispatch) => {
 export const formInfoData = (id) => async (dispatch) => {
   const querySnapshot = await getDocs(collection(firestore, "forms"));
   let data = {};
-  console.log(data)
   querySnapshot.forEach((ele) => {
     if (ele.id === id) {
       data = ele.data();

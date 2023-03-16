@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  max-width: 100%;
 }
 
 .info-form-container > h1 {
-  position: absolute;
-  top: 50px;
+  margin-bottom: 80px;
   font-size: 40px;
   animation: mounted_info 2s;
 }
@@ -18,26 +18,35 @@
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  font-size: 20px;
   margin-left: 40px;
   margin-bottom: 20px;
   letter-spacing: 4px;
-  overflow-x: hidden;
   animation: mounted_info 2s;
+  max-width: 100%;
 }
 
 .icon {
   width: 2rem;
   max-width: 2rem;
-  overflow-x: hidden;
+  font-size: 30px;
 }
 
-.info {
+.info, .emailsplit {
   width: 25rem;
   max-width: 25rem;
-  overflow-x: hidden;
+
   font-size: 25px;
 }
+
+.emailsplit{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emailsplit > p{
+  margin: 0;
+}
+
 .back {
   position: absolute;
   right: 40px;
@@ -74,14 +83,41 @@
   }
 }
 
+
 @media (max-width: 550px) {
   .back {
     position: static;
     margin-top: 80px;
   }
-
+  
   .info-form-container > h1 {
     top: 20px;
     animation: mounted_info 2s;
   }
+}
+
+@media (max-width: 500px) {
+  .info, .emailsplit {
+  width: 20rem;
+  max-width: 20rem;
+  font-size: 18px;
+}
+
+.info-form-container > h1{
+  text-align: center;
+}
+}
+
+
+@media (max-width: 400px) {
+  .info, .emailsplit {
+  width: 15rem;
+  max-width: 15rem;
+    font-size: 15px;
+}
+
+.icon{
+  width: fit-content;
+  font-size: 20px;
+}
 }
