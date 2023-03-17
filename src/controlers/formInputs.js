@@ -39,7 +39,11 @@ export const handleSubmit = async (
 ) => {
   event.preventDefault();
 
-  if (Object.values(info).length === 5 && info.terms_and_conditions !== false) {
+  if (
+    Object.values(info).length === 5 &&
+    info.terms_and_conditions !== false &&
+    Object.values(info).includes("")
+  ) {
     try {
       addDoc(connect, info);
       dispatch(formInfo(info));
