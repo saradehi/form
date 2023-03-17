@@ -42,7 +42,7 @@ export const handleSubmit = async (
   if (
     Object.values(info).length === 5 &&
     info.terms_and_conditions !== false &&
-    Object.values(info).includes("")
+    !Object.values(info).includes("")
   ) {
     try {
       addDoc(connect, info);
